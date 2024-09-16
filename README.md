@@ -1,50 +1,36 @@
-# React + TypeScript + Vite
+ReactJS/NodeJS quick test
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Requirement:
 
-Currently, two official plugins are available:
+1. Search, filter (depends on the JSON you define)
+2. See more (load more data if you need)
+3. Refresh data after the 60s. (if you are FE: refresh to get JSON DATA)
+4. UI: You can style by yourself to achieve the requirements. Layout design
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- CSS or choose a library UI
+- A sample figma design is for reference: [Untitled](<https://www.figma.com/design/Ki2siJInpEP3eoKOIMD84R/Untitled-(Copy)?node-id=84-704&node-type=instance&m=dev>)
 
-## Expanding the ESLint configuration
+Database:
+JSON DATA, you can define yourself.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+```
++ If you do not have backend skills.
+  + JSON DATA to display
 
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
++ This is OPTIONAL: you have backend skills
+  + Build backend
+  + Show API
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+Technology:
+Use technology that you are familiar with like React/Vue/Angular....
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+Layout:
+Nice to have a responsive UI
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+Note:
+
+- The deadline for you to submit back this assignment is 3 days since you receive this email.
+- Please upload your result on GitHub (without sharing with anyone, or make note of any usage instructions) and jot down: What have you done so far?
+- What are some improvement/ missing pieces you would like to do if you have more time?
+- Once finished, kindly send us the GitHub link via this email. Besides, please also inform how many hours you actually spent finishing the assignment.

@@ -1,0 +1,162 @@
+[
+  {
+    "id": 0,
+    "tier": "Epic",
+    "theme": "Halloween",
+    "createdAt": "2024-09-16T14:29:19.165Z",
+    "price": 2.75,
+    "role": "The DJ"
+  },
+  {
+    "id": 1,
+    "tier": "Common",
+    "theme": "Halloween",
+    "createdAt": "2024-09-15T14:29:19.165Z",
+    "price": 2.75,
+    "role": "Assassin"
+  },
+  {
+    "id": 2,
+    "tier": "Rare",
+    "theme": "Halloween",
+    "createdAt": "2024-09-14T14:29:19.165Z",
+    "price": 2.75,
+    "role": "Neon Guy"
+  },
+  {
+    "id": 3,
+    "tier": "Mythic",
+    "theme": "Halloween",
+    "createdAt": "2024-09-16T14:29:19.165Z",
+    "price": 2.75,
+    "role": "Basketball Girl"
+  },
+  {
+    "id": 4,
+    "tier": "Legendary",
+    "theme": "Halloween",
+    "createdAt": "2024-09-16T12:29:19.165Z",
+    "price": 2.75,
+    "role": "Mafia England"
+  },
+  {
+    "id": 5,
+    "tier": "Epic",
+    "theme": "Halloween",
+    "createdAt": "2024-09-16T14:29:19.165Z",
+    "price": 2.75,
+    "role": "The DJ"
+  },
+  {
+    "id": 6,
+    "tier": "Common",
+    "theme": "Halloween",
+    "createdAt": "2024-09-15T14:29:19.165Z",
+    "price": 2.75,
+    "role": "Assassin"
+  },
+  {
+    "id": 7,
+    "tier": "Rare",
+    "theme": "Halloween",
+    "createdAt": "2024-09-14T14:29:19.165Z",
+    "price": 2.75,
+    "role": "Neon Guy"
+  },
+  {
+    "id": 8,
+    "tier": "Mythic",
+    "theme": "Halloween",
+    "createdAt": "2024-09-16T14:29:19.165Z",
+    "price": 2.75,
+    "role": "Basketball Girl"
+  },
+  {
+    "id": 9,
+    "tier": "Legendary",
+    "theme": "Halloween",
+    "createdAt": "2024-09-16T12:29:19.165Z",
+    "price": 2.75,
+    "role": "Mafia England"
+  },
+  {
+    "id": 10,
+    "tier": "Epic",
+    "theme": "Halloween",
+    "createdAt": "2024-09-16T14:29:19.165Z",
+    "price": 2.75,
+    "role": "The DJ"
+  },
+  {
+    "id": 11,
+    "tier": "Common",
+    "theme": "Halloween",
+    "createdAt": "2024-09-15T14:29:19.165Z",
+    "price": 2.75,
+    "role": "Assassin"
+  },
+  {
+    "id": 12,
+    "tier": "Rare",
+    "theme": "Halloween",
+    "createdAt": "2024-09-14T14:29:19.165Z",
+    "price": 2.75,
+    "role": "Neon Guy"
+  },
+  {
+    "id": 13,
+    "tier": "Mythic",
+    "theme": "Halloween",
+    "createdAt": "2024-09-16T14:29:19.165Z",
+    "price": 2.75,
+    "role": "Basketball Girl"
+  },
+  {
+    "id": 14,
+    "tier": "Legendary",
+    "theme": "Halloween",
+    "createdAt": "2024-09-16T12:29:19.165Z",
+    "price": 2.75,
+    "role": "Mafia England"
+  },
+  {
+    "id": 15,
+    "tier": "Epic",
+    "theme": "Halloween",
+    "createdAt": "2024-09-16T14:29:19.165Z",
+    "price": 2.75,
+    "role": "The DJ"
+  },
+  {
+    "id": 16,
+    "tier": "Common",
+    "theme": "Halloween",
+    "createdAt": "2024-09-15T14:29:19.165Z",
+    "price": 2.75,
+    "role": "Assassin"
+  },
+  {
+    "id": 17,
+    "tier": "Rare",
+    "theme": "Halloween",
+    "createdAt": "2024-09-14T14:29:19.165Z",
+    "price": 2.75,
+    "role": "Neon Guy"
+  },
+  {
+    "id": 18,
+    "tier": "Mythic",
+    "theme": "Halloween",
+    "createdAt": "2024-09-16T14:29:19.165Z",
+    "price": 2.75,
+    "role": "Basketball Girl"
+  },
+  {
+    "id": 19,
+    "tier": "Legendary",
+    "theme": "Halloween",
+    "createdAt": "2024-09-16T12:29:19.165Z",
+    "price": 2.75,
+    "role": "Mafia England"
+  }
+]

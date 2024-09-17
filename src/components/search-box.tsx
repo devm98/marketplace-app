@@ -2,7 +2,7 @@ import { useState } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { useSearchParams } from "react-router-dom";
 import ReactSlider from "react-slider";
-import { tierOptions } from "../constant";
+import { themeOptions, tierOptions } from "../constant";
 
 type Inputs = {
   tier: string;
@@ -22,15 +22,16 @@ const SearchBox = () => {
     priceRangeParamTo,
   ]);
 
-  const { register, handleSubmit } = useForm<Inputs>({
+  const { register, handleSubmit, reset } = useForm<Inputs>({
     defaultValues: {
       tier: query.get("tier") || "all",
       theme: query.get("theme") || "all",
-      time: query.get("time") || "latest",
-      price: query.get("price") || "lowToHight",
+      time: query.get("time") || "lastFiveDays",
+      price: query.get("price") || "lowToHigh",
       quickSearch: query.get("quickSearch") || "",
     },
   });
+
   const onSubmit: SubmitHandler<Inputs> = (data) => {
     setSearchParams((params) => {
       params.set("tier", data.tier);
@@ -40,6 +41,27 @@ const SearchBox = () => {
       params.set("quickSearch", data.quickSearch);
       params.set("priceRangeFrom", priceVl[0].toString());
       params.set("priceRangeTo", priceVl[1].toString());
+      return params;
+    });
+  };
+
+  const handleClearFilter = () => {
+    reset({
+      price: "lowToHigh",
+      tier: "all",
+      theme: "all",
+      time: "lastFiveDays",
+      quickSearch: "",
+    });
+    setPriceRange([0.01, 100]);
+    setSearchParams((params) => {
+      params.delete("tier");
+      params.delete("theme");
+      params.delete("time");
+      params.delete("price");
+      params.delete("quickSearch");
+      params.delete("priceRangeFrom");
+      params.delete("priceRangeTo");
       return params;
     });
   };
@@ -83,7 +105,7 @@ const SearchBox = () => {
                 >
                   <div className="absolute w-4 h-4 bg-dot top-2/4 left-2/4 -translate-x-2/4 -translate-y-2/4 rounded-full"></div>
                   <div className="absolute w-[100px] h-[49px] bottom-7 -left-10 hidden group-hover:inline-block	">
-                    <img src="/public/images/union.png" alt="" />
+                    <img src="/images/union.png" alt="" />
                     <span className="text-white absolute top-2 left-2/4 -translate-x-2/4  w-full justify-center inline-flex">
                       {state.valueNow} ETH
                     </span>
@@ -104,12 +126,9 @@ const SearchBox = () => {
             <div className="w-[372px] h-11 px-4 py-2.5 rounded border border-[#3a3841]">
               <select
                 defaultValue={"all"}
-                className="bg-transparent text-white w-full outline-none"
+                className="bg-[#060a18] text-white w-full outline-none"
                 {...register("tier")}
               >
-                <option className="bg-transparent" value="all">
-                  All
-                </option>
                 {tierOptions.map((tier) => {
                   return (
                     <option key={tier.value} value={tier.value}>
@@ -125,11 +144,16 @@ const SearchBox = () => {
             <div className="w-[372px] h-11 px-4 py-2.5 rounded border border-[#3a3841]">
               <select
                 defaultValue={"all"}
-                className="bg-transparent text-white w-full outline-none"
+                className="bg-[#060a18] text-white w-full outline-none"
                 {...register("theme")}
               >
-                <option value="all">All</option>
-                <option value="halloween">Halloween</option>
+                {themeOptions.map((theme) => {
+                  return (
+                    <option key={theme.value} value={theme.value}>
+                      {theme.name}
+                    </option>
+                  );
+                })}
               </select>
             </div>
           </div>
@@ -137,12 +161,13 @@ const SearchBox = () => {
             <label className="text-white">TIME</label>
             <div className="w-[372px] h-11 px-4 py-2.5 rounded border border-[#3a3841]">
               <select
-                defaultValue={"latest"}
-                className="bg-transparent text-white w-full outline-none"
+                defaultValue={"lastFiveDays"}
+                className="bg-[#060a18] text-white w-full outline-none"
                 {...register("time")}
               >
-                <option value="latest">Latest</option>
-                <option value="oldest">Oldest</option>
+                <option value="lastFiveDays">The last 5 days</option>
+                <option value="lastTenDays">The last 10 days</option>
+                <option value="lastTwentyDays">The last 20 days</option>
               </select>
             </div>
           </div>
@@ -150,19 +175,22 @@ const SearchBox = () => {
             <label className="text-white">PRICE</label>
             <div className="w-[372px] h-11 px-4 py-2.5 rounded border border-[#3a3841]">
               <select
-                defaultValue={"lowToHight"}
-                className="bg-transparent text-white w-full outline-none"
+                defaultValue={"lowToHigh"}
+                className="bg-[#060a18] text-white w-full outline-none"
                 {...register("price")}
               >
-                <option value="lowToHight">Low to hight</option>
-                <option value="hightToLow">Hight to low</option>
+                <option value="lowToHigh">Low to high</option>
+                <option value="highToLow">High to low</option>
               </select>
             </div>
           </div>
         </div>
 
         <div className="action-group flex gap-10 mt-[30px]">
-          <button className="text-white flex cursor-pointer items-center gap-2 px-2 py-2">
+          <button
+            className="text-white flex cursor-pointer items-center gap-2 px-2 py-2"
+            onClick={handleClearFilter}
+          >
             <img src="/images/reset.svg" alt="" />
             <span>Reset filter</span>
           </button>

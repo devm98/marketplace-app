@@ -4,7 +4,7 @@ type FigureType = {
   theme: string;
   img: string;
   createdAt: string;
-  price: number | string;
+  price: number;
   role: string;
 };
 

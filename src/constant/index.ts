@@ -48,4 +48,34 @@ const tierOptions: {
   },
 ] as const;
 
-export { tierOptions };
+const themeOptions: {
+  name: string;
+  value: string;
+}[] = [
+  {
+    name: "All",
+    value: "all",
+  },
+  {
+    name: "Halloween",
+    value: "halloween",
+  },
+  {
+    name: "Space",
+    value: "space",
+  },
+  {
+    name: "Steampunk",
+    value: "steampunk",
+  },
+  {
+    name: "Cyberpunk",
+    value: "cyberpunk",
+  },
+  {
+    name: "Fantasy",
+    value: "fantasy",
+  },
+];
+
+export { themeOptions, tierOptions };

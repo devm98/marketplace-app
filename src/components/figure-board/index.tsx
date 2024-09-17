@@ -1,7 +1,10 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import dayjs from "dayjs";
+import { useEffect, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import figureList from "../../api/marketplace-data.json";
 import { convertToCamelCase } from "../../helpers";
+import { FigureType } from "../../types/marketplace-data.type";
 import FigureCard from "./figure-card";
 import TierFilter from "./tier-filter";
 
@@ -17,6 +20,8 @@ const FigureBoard = () => {
     to: Number(query.get("priceRangeTo")) || 200,
   };
   const quickSearchParam = query.get("quickSearch") ?? "";
+
+  const [pagingFigureList, setPagingFigureList] = useState<FigureType[]>([]);
 
   const figureSearchList = figureList
     .filter((item) => {
@@ -101,20 +106,45 @@ const FigureBoard = () => {
       return 0;
     });
 
-  console.log("figureSearchList", figureSearchList);
+  console.log("figureSearchList", figureSearchList.length);
+
+  useEffect(() => {
+    setPagingFigureList(figureSearchList.slice(0, 12));
+  }, [
+    tierParam,
+    themeParam,
+    timeParam,
+    priceParam,
+    query.get("priceRangeFrom"),
+    query.get("priceRangeTo"),
+  ]);
+
+  console.log(pagingFigureList);
+
+  const handleViewMore = () => {
+    const currentLength = pagingFigureList.length;
+    const nextLength = currentLength + 8;
+    const nextFigureList = figureSearchList.slice(0, nextLength);
+    setPagingFigureList(nextFigureList);
+  };
 
   return (
     <section className="">
       <TierFilter />
       <div className="figure-list">
         <div className="flex flex-wrap gap-10">
-          {figureSearchList.map((figure) => {
+          {pagingFigureList.map((figure) => {
             return <FigureCard key={figure.id} figure={figure} />;
           })}
         </div>
-        <button className="w-[326px] h-[70px] py-[23px] text-white bg-gradient-to-r from-[#da458f] to-[#d933dd] rounded shadow justify-center items-center flex mt-[55px] mx-auto">
-          View more
-        </button>
+        {figureSearchList.length > pagingFigureList.length && (
+          <button
+            className="w-[326px] h-[70px] py-[23px] text-white bg-gradient-to-r from-[#da458f] to-[#d933dd] rounded shadow justify-center items-center flex mt-[55px] mx-auto"
+            onClick={handleViewMore}
+          >
+            View more
+          </button>
+        )}
       </div>
     </section>
   );

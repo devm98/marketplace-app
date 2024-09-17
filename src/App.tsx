@@ -14,6 +14,7 @@ function App() {
           <SearchBox />
           <FigureBoard />
         </div>
+        <img className="mt-[54px]" src="/images/frame.svg" alt="" />
         <Footer />
       </div>
     </main>

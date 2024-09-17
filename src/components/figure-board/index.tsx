@@ -14,13 +14,16 @@ const FigureBoard = () => {
   const priceParam = query.get("price") ?? "lowToHigh";
   const priceRangeParam = {
     from: Number(query.get("priceRangeFrom")) || 0.01,
-    to: Number(query.get("priceRangeTo")) || 100,
+    to: Number(query.get("priceRangeTo")) || 200,
   };
+  const quickSearchParam = query.get("quickSearch") ?? "";
 
   const figureSearchList = figureList
     .filter((item) => {
       const newTier = convertToCamelCase(item.tier);
       const newTheme = convertToCamelCase(item.theme);
+      const isPriceInRange =
+        item.price >= priceRangeParam.from && item.price <= priceRangeParam.to;
 
       const isDaysAgo = dayjs(item.createdAt).isAfter(
         dayjs().subtract(
@@ -33,21 +36,61 @@ const FigureBoard = () => {
         )
       );
 
+      const isQuickSearch =
+        quickSearchParam === "" ||
+        item.tier
+          .toLocaleLowerCase()
+          .includes(quickSearchParam.toLocaleLowerCase()) ||
+        item.role
+          .toLocaleLowerCase()
+          .includes(quickSearchParam.toLocaleLowerCase()) ||
+        item.theme
+          .toLocaleLowerCase()
+          .includes(quickSearchParam.toLocaleLowerCase());
+
       if (tierParam === "all") {
-        if (themeParam !== "all") return isDaysAgo && themeParam === newTheme;
-        return isDaysAgo && newTier !== "all";
+        if (themeParam !== "all")
+          return (
+            isQuickSearch &&
+            isPriceInRange &&
+            isDaysAgo &&
+            themeParam === newTheme
+          );
+        return (
+          isQuickSearch && isPriceInRange && isDaysAgo && newTier !== "all"
+        );
       }
 
       if (themeParam === "all") {
-        if (tierParam !== "all") return isDaysAgo && tierParam === newTier;
-        return isDaysAgo && newTheme !== "all";
+        if (tierParam !== "all")
+          return (
+            isQuickSearch &&
+            isPriceInRange &&
+            isDaysAgo &&
+            tierParam === newTier
+          );
+        return (
+          isQuickSearch && isPriceInRange && isDaysAgo && newTheme !== "all"
+        );
       }
 
       if (tierParam === "all" && themeParam === "all") {
-        return isDaysAgo && newTier !== "all" && newTheme !== "all";
+        return (
+          isQuickSearch &&
+          isPriceInRange &&
+          isDaysAgo &&
+          newTier !== "all" &&
+          newTheme !== "all"
+        );
       }
 
-      return isDaysAgo && tierParam === newTier && themeParam === newTheme;
+      return (
+        isQuickSearch &&
+        isPriceInRange &&
+        isDaysAgo &&
+        tierParam === newTier &&
+        themeParam === newTheme
+      );
     })
     .sort((a, b) => {
       if (priceParam === "lowToHigh") {

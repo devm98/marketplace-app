@@ -16,7 +16,7 @@ const SearchBox = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   const query = new URLSearchParams(searchParams);
   const priceRangeParamFrom = Number(query.get("priceRangeFrom") ?? 0.01);
-  const priceRangeParamTo = Number(query.get("priceRangeTo") ?? 100);
+  const priceRangeParamTo = Number(query.get("priceRangeTo") ?? 200);
   const [priceVl, setPriceRange] = useState([
     priceRangeParamFrom,
     priceRangeParamTo,
@@ -53,7 +53,7 @@ const SearchBox = () => {
       time: "lastFiveDays",
       quickSearch: "",
     });
-    setPriceRange([0.01, 100]);
+    setPriceRange([0.01, 200]);
     setSearchParams((params) => {
       params.delete("tier");
       params.delete("theme");

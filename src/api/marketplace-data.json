@@ -1,162 +1,425 @@
 [
   {
     "id": 0,
-    "tier": "Epic",
-    "theme": "Halloween",
-    "createdAt": "2024-09-16T14:29:19.165Z",
-    "price": 2.75,
+    "tier": "Common",
+    "theme": "Cyberpunk",
+    "img": "/images/card/basketball-girl-card.png",
+    "createdAt": "2024-09-17T10:45:22.539Z",
+    "price": "192.90",
     "role": "The DJ"
   },
   {
     "id": 1,
     "tier": "Common",
-    "theme": "Halloween",
-    "createdAt": "2024-09-15T14:29:19.165Z",
-    "price": 2.75,
-    "role": "Assassin"
+    "theme": "Fantasy",
+    "img": "/images/card/mafia-england-card.png",
+    "createdAt": "2024-09-13T17:13:40.177Z",
+    "price": "124.03",
+    "role": "Neon Guy"
   },
   {
     "id": 2,
-    "tier": "Rare",
-    "theme": "Halloween",
-    "createdAt": "2024-09-14T14:29:19.165Z",
-    "price": 2.75,
+    "tier": "Lower Body",
+    "theme": "Cyberpunk",
+    "img": "/images/card/mafia-england-card.png",
+    "createdAt": "2024-09-18T21:28:55.184Z",
+    "price": "23.97",
     "role": "Neon Guy"
   },
   {
     "id": 3,
-    "tier": "Mythic",
-    "theme": "Halloween",
-    "createdAt": "2024-09-16T14:29:19.165Z",
-    "price": 2.75,
-    "role": "Basketball Girl"
+    "tier": "Accessory",
+    "theme": "Fantasy",
+    "img": "/images/card/assassin-card.png",
+    "createdAt": "2024-09-07T09:58:04.374Z",
+    "price": "185.00",
+    "role": "Neon Guy"
   },
   {
     "id": 4,
-    "tier": "Legendary",
+    "tier": "Rare",
     "theme": "Halloween",
-    "createdAt": "2024-09-16T12:29:19.165Z",
-    "price": 2.75,
-    "role": "Mafia England"
+    "img": "/images/card/the-dj-card.png",
+    "createdAt": "2024-09-02T02:57:16.571Z",
+    "price": "175.65",
+    "role": "Basketball Girl"
   },
   {
     "id": 5,
     "tier": "Epic",
-    "theme": "Halloween",
-    "createdAt": "2024-09-16T14:29:19.165Z",
-    "price": 2.75,
+    "theme": "Steampunk",
+    "img": "/images/card/the-dj-card.png",
+    "createdAt": "2024-09-24T20:10:41.467Z",
+    "price": "198.75",
     "role": "The DJ"
   },
   {
     "id": 6,
-    "tier": "Common",
+    "tier": "Mythic",
     "theme": "Halloween",
-    "createdAt": "2024-09-15T14:29:19.165Z",
-    "price": 2.75,
-    "role": "Assassin"
+    "img": "/images/card/the-dj-card.png",
+    "createdAt": "2024-09-11T00:04:55.908Z",
+    "price": "11.41",
+    "role": "Basketball Girl"
   },
   {
     "id": 7,
-    "tier": "Rare",
-    "theme": "Halloween",
-    "createdAt": "2024-09-14T14:29:19.165Z",
-    "price": 2.75,
-    "role": "Neon Guy"
+    "tier": "Mythic",
+    "theme": "Cyberpunk",
+    "img": "/images/card/basketball-girl-card.png",
+    "createdAt": "2024-09-25T05:19:25.060Z",
+    "price": "70.69",
+    "role": "The DJ"
   },
   {
     "id": 8,
-    "tier": "Mythic",
+    "tier": "Rare",
     "theme": "Halloween",
-    "createdAt": "2024-09-16T14:29:19.165Z",
-    "price": 2.75,
+    "img": "/images/card/mafia-england-card.png",
+    "createdAt": "2024-09-21T23:14:47.236Z",
+    "price": "116.53",
     "role": "Basketball Girl"
   },
   {
     "id": 9,
-    "tier": "Legendary",
-    "theme": "Halloween",
-    "createdAt": "2024-09-16T12:29:19.165Z",
-    "price": 2.75,
-    "role": "Mafia England"
-  },
-  {
-    "id": 10,
-    "tier": "Epic",
-    "theme": "Halloween",
-    "createdAt": "2024-09-16T14:29:19.165Z",
-    "price": 2.75,
-    "role": "The DJ"
-  },
-  {
-    "id": 11,
-    "tier": "Common",
-    "theme": "Halloween",
-    "createdAt": "2024-09-15T14:29:19.165Z",
-    "price": 2.75,
+    "tier": "Hat",
+    "theme": "Cyberpunk",
+    "img": "/images/card/basketball-girl-card.png",
+    "createdAt": "2024-09-21T01:29:09.611Z",
+    "price": "63.29",
     "role": "Assassin"
   },
   {
+    "id": 10,
+    "tier": "Mythic",
+    "theme": "Cyberpunk",
+    "img": "/images/card/the-dj-card.png",
+    "createdAt": "2024-09-11T17:43:25.945Z",
+    "price": "191.03",
+    "role": "Assassin"
+  },
+  {
+    "id": 11,
+    "tier": "Lower Body",
+    "theme": "Cyberpunk",
+    "img": "/images/card/the-dj-card.png",
+    "createdAt": "2024-09-15T11:09:08.236Z",
+    "price": "7.19",
+    "role": "Basketball Girl"
+  },
+  {
     "id": 12,
-    "tier": "Rare",
+    "tier": "Accessory",
     "theme": "Halloween",
-    "createdAt": "2024-09-14T14:29:19.165Z",
-    "price": 2.75,
-    "role": "Neon Guy"
+    "img": "/images/card/the-dj-card.png",
+    "createdAt": "2024-09-25T11:10:07.318Z",
+    "price": "183.97",
+    "role": "Basketball Girl"
   },
   {
     "id": 13,
-    "tier": "Mythic",
+    "tier": "All",
     "theme": "Halloween",
-    "createdAt": "2024-09-16T14:29:19.165Z",
-    "price": 2.75,
-    "role": "Basketball Girl"
+    "img": "/images/card/basketball-girl-card.png",
+    "createdAt": "2024-09-19T16:29:57.977Z",
+    "price": "137.75",
+    "role": "Mafia England"
   },
   {
     "id": 14,
     "tier": "Legendary",
-    "theme": "Halloween",
-    "createdAt": "2024-09-16T12:29:19.165Z",
-    "price": 2.75,
-    "role": "Mafia England"
-  },
-  {
-    "id": 15,
-    "tier": "Epic",
-    "theme": "Halloween",
-    "createdAt": "2024-09-16T14:29:19.165Z",
-    "price": 2.75,
+    "theme": "Space",
+    "img": "/images/card/assassin-card.png",
+    "createdAt": "2024-09-06T11:50:12.702Z",
+    "price": "125.56",
     "role": "The DJ"
   },
   {
-    "id": 16,
-    "tier": "Common",
-    "theme": "Halloween",
-    "createdAt": "2024-09-15T14:29:19.165Z",
-    "price": 2.75,
-    "role": "Assassin"
-  },
-  {
-    "id": 17,
-    "tier": "Rare",
-    "theme": "Halloween",
-    "createdAt": "2024-09-14T14:29:19.165Z",
-    "price": 2.75,
+    "id": 15,
+    "tier": "Shoes",
+    "theme": "Cyberpunk",
+    "img": "/images/card/the-dj-card.png",
+    "createdAt": "2024-09-23T15:16:37.814Z",
+    "price": "165.94",
     "role": "Neon Guy"
   },
   {
+    "id": 16,
+    "tier": "Lower Body",
+    "theme": "Space",
+    "img": "/images/card/neon-guy-card.png",
+    "createdAt": "2024-09-14T13:37:11.503Z",
+    "price": "125.38",
+    "role": "Neon Guy"
+  },
+  {
+    "id": 17,
+    "tier": "Accessory",
+    "theme": "Fantasy",
+    "img": "/images/card/mafia-england-card.png",
+    "createdAt": "2024-09-16T15:51:08.965Z",
+    "price": "41.92",
+    "role": "Mafia England"
+  },
+  {
     "id": 18,
-    "tier": "Mythic",
-    "theme": "Halloween",
-    "createdAt": "2024-09-16T14:29:19.165Z",
-    "price": 2.75,
-    "role": "Basketball Girl"
+    "tier": "Legendary",
+    "theme": "Cyberpunk",
+    "img": "/images/card/the-dj-card.png",
+    "createdAt": "2024-09-17T19:04:41.832Z",
+    "price": "136.61",
+    "role": "The DJ"
   },
   {
     "id": 19,
+    "tier": "Accessory",
+    "theme": "Cyberpunk",
+    "img": "/images/card/basketball-girl-card.png",
+    "createdAt": "2024-09-01T16:06:32.953Z",
+    "price": "59.49",
+    "role": "Neon Guy"
+  },
+  {
+    "id": 20,
+    "tier": "Rare",
+    "theme": "Cyberpunk",
+    "img": "/images/card/the-dj-card.png",
+    "createdAt": "2024-09-21T23:17:38.032Z",
+    "price": "84.71",
+    "role": "Neon Guy"
+  },
+  {
+    "id": 21,
     "tier": "Legendary",
+    "theme": "Cyberpunk",
+    "img": "/images/card/basketball-girl-card.png",
+    "createdAt": "2024-09-03T20:31:59.195Z",
+    "price": "178.07",
+    "role": "Assassin"
+  },
+  {
+    "id": 22,
+    "tier": "All",
+    "theme": "Fantasy",
+    "img": "/images/card/mafia-england-card.png",
+    "createdAt": "2024-09-19T17:58:14.204Z",
+    "price": "56.59",
+    "role": "The DJ"
+  },
+  {
+    "id": 23,
+    "tier": "Common",
+    "theme": "Space",
+    "img": "/images/card/mafia-england-card.png",
+    "createdAt": "2024-09-01T10:38:24.829Z",
+    "price": "42.54",
+    "role": "Neon Guy"
+  },
+  {
+    "id": 24,
+    "tier": "Shoes",
+    "theme": "Steampunk",
+    "img": "/images/card/mafia-england-card.png",
+    "createdAt": "2024-09-20T20:05:27.569Z",
+    "price": "41.70",
+    "role": "Assassin"
+  },
+  {
+    "id": 25,
+    "tier": "Accessory",
     "theme": "Halloween",
-    "createdAt": "2024-09-16T12:29:19.165Z",
-    "price": 2.75,
+    "img": "/images/card/basketball-girl-card.png",
+    "createdAt": "2024-09-21T10:05:17.961Z",
+    "price": "129.96",
+    "role": "Basketball Girl"
+  },
+  {
+    "id": 26,
+    "tier": "Hat",
+    "theme": "Steampunk",
+    "img": "/images/card/the-dj-card.png",
+    "createdAt": "2024-09-24T22:21:45.187Z",
+    "price": "125.25",
+    "role": "Assassin"
+  },
+  {
+    "id": 27,
+    "tier": "Epic",
+    "theme": "Steampunk",
+    "img": "/images/card/the-dj-card.png",
+    "createdAt": "2024-09-30T06:14:57.773Z",
+    "price": "95.35",
+    "role": "Basketball Girl"
+  },
+  {
+    "id": 28,
+    "tier": "Legendary",
+    "theme": "Steampunk",
+    "img": "/images/card/mafia-england-card.png",
+    "createdAt": "2024-09-12T09:09:18.079Z",
+    "price": "110.89",
+    "role": "Basketball Girl"
+  },
+  {
+    "id": 29,
+    "tier": "Upper Body",
+    "theme": "Cyberpunk",
+    "img": "/images/card/mafia-england-card.png",
+    "createdAt": "2024-09-09T01:40:58.468Z",
+    "price": "195.38",
+    "role": "Basketball Girl"
+  },
+  {
+    "id": 30,
+    "tier": "Accessory",
+    "theme": "Fantasy",
+    "img": "/images/card/the-dj-card.png",
+    "createdAt": "2024-09-03T21:37:26.176Z",
+    "price": "35.10",
+    "role": "The DJ"
+  },
+  {
+    "id": 31,
+    "tier": "Hat",
+    "theme": "Steampunk",
+    "img": "/images/card/the-dj-card.png",
+    "createdAt": "2024-09-02T00:15:15.014Z",
+    "price": "134.59",
     "role": "Mafia England"
+  },
+  {
+    "id": 32,
+    "tier": "Common",
+    "theme": "Halloween",
+    "img": "/images/card/basketball-girl-card.png",
+    "createdAt": "2024-09-15T04:30:51.193Z",
+    "price": "161.52",
+    "role": "Assassin"
+  },
+  {
+    "id": 33,
+    "tier": "All",
+    "theme": "Halloween",
+    "img": "/images/card/neon-guy-card.png",
+    "createdAt": "2024-09-21T23:29:19.433Z",
+    "price": "145.22",
+    "role": "Mafia England"
+  },
+  {
+    "id": 34,
+    "tier": "Shoes",
+    "theme": "Space",
+    "img": "/images/card/basketball-girl-card.png",
+    "createdAt": "2024-09-29T10:56:52.872Z",
+    "price": "92.83",
+    "role": "Neon Guy"
+  },
+  {
+    "id": 35,
+    "tier": "Hat",
+    "theme": "Steampunk",
+    "img": "/images/card/neon-guy-card.png",
+    "createdAt": "2024-09-07T05:11:40.272Z",
+    "price": "155.63",
+    "role": "Assassin"
+  },
+  {
+    "id": 36,
+    "tier": "Common",
+    "theme": "Fantasy",
+    "img": "/images/card/the-dj-card.png",
+    "createdAt": "2024-09-19T03:01:27.146Z",
+    "price": "119.53",
+    "role": "Mafia England"
+  },
+  {
+    "id": 37,
+    "tier": "All",
+    "theme": "Cyberpunk",
+    "img": "/images/card/the-dj-card.png",
+    "createdAt": "2024-09-17T22:42:44.428Z",
+    "price": "94.82",
+    "role": "Neon Guy"
+  },
+  {
+    "id": 38,
+    "tier": "Legendary",
+    "theme": "Fantasy",
+    "img": "/images/card/mafia-england-card.png",
+    "createdAt": "2024-09-26T05:00:24.506Z",
+    "price": "40.94",
+    "role": "The DJ"
+  },
+  {
+    "id": 39,
+    "tier": "Shoes",
+    "theme": "Space",
+    "img": "/images/card/the-dj-card.png",
+    "createdAt": "2024-09-04T07:30:12.893Z",
+    "price": "114.67",
+    "role": "Assassin"
+  },
+  {
+    "id": 40,
+    "tier": "Shoes",
+    "theme": "Halloween",
+    "img": "/images/card/mafia-england-card.png",
+    "createdAt": "2024-09-17T19:56:38.077Z",
+    "price": "21.20",
+    "role": "Neon Guy"
+  },
+  {
+    "id": 41,
+    "tier": "All",
+    "theme": "Steampunk",
+    "img": "/images/card/mafia-england-card.png",
+    "createdAt": "2024-09-11T16:54:33.361Z",
+    "price": "197.01",
+    "role": "Neon Guy"
+  },
+  {
+    "id": 42,
+    "tier": "Upper Body",
+    "theme": "Halloween",
+    "img": "/images/card/assassin-card.png",
+    "createdAt": "2024-09-10T09:19:17.931Z",
+    "price": "72.00",
+    "role": "The DJ"
+  },
+  {
+    "id": 43,
+    "tier": "Accessory",
+    "theme": "Fantasy",
+    "img": "/images/card/the-dj-card.png",
+    "createdAt": "2024-09-26T02:38:13.690Z",
+    "price": "61.98",
+    "role": "The DJ"
+  },
+  {
+    "id": 44,
+    "tier": "Hat",
+    "theme": "Halloween",
+    "img": "/images/card/the-dj-card.png",
+    "createdAt": "2024-09-06T04:46:37.889Z",
+    "price": "136.78",
+    "role": "Assassin"
+  },
+  {
+    "id": 45,
+    "tier": "Upper Body",
+    "theme": "Halloween",
+    "img": "/images/card/mafia-england-card.png",
+    "createdAt": "2024-09-13T04:53:56.866Z",
+    "price": "32.24",
+    "role": "Assassin"
+  },
+  {
+    "id": 46,
+    "tier": "Upper Body",
+    "theme": "Space",
+    "img": "/images/card/mafia-england-card.png",
+    "createdAt": "2024-09-30T05:19:00.290Z",
+    "price": "79.49",
+    "role": "The DJ"
   }
 ]

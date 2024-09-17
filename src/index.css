@@ -8,3 +8,20 @@
   font-weight: 500;
   font-style: normal;
 }
+
+@layer utilities {
+  .scrollbar::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  .scrollbar::-webkit-scrollbar-track {
+    border-radius: 3px;
+    background: #777;
+  }
+
+  .scrollbar::-webkit-scrollbar-thumb {
+    border-radius: 3px;
+    background: #ffcc21;
+  }
+}

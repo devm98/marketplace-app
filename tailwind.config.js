@@ -5,6 +5,7 @@ export default {
     extend: {
       backgroundImage: {
         "big-background": "url('/images/bg.png')",
+        dot: "radial-gradient(#F643E4, #FF54EE00)",
       },
     },
   },

@@ -48,7 +48,7 @@ const Banner = () => {
                   alt=""
                 />
               </div>
-              <span>{figure.name}</span>
+              <span className="font-bold">{figure.name}</span>
             </div>
           ))}
         </div>

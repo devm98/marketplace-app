@@ -15,12 +15,13 @@ const FigureBoard = () => {
   const themeParam = query.get("theme") ?? "all";
   const timeParam = query.get("time") ?? "lastFiveDays";
   const priceParam = query.get("price") ?? "lowToHigh";
+  const priceRangeFromParam = query.get("priceRangeFrom") || 0.01;
+  const priceRangeToParam = query.get("priceRangeTo") || 200;
   const priceRangeParam = {
-    from: Number(query.get("priceRangeFrom")) || 0.01,
-    to: Number(query.get("priceRangeTo")) || 200,
+    from: +priceRangeFromParam,
+    to: +priceRangeToParam,
   };
   const quickSearchParam = query.get("quickSearch") ?? "";
-
   const [pagingFigureList, setPagingFigureList] = useState<FigureType[]>([]);
 
   const figureSearchList = figureList
@@ -53,48 +54,26 @@ const FigureBoard = () => {
           .toLocaleLowerCase()
           .includes(quickSearchParam.toLocaleLowerCase());
 
+      const isCommonConditional = isQuickSearch && isPriceInRange && isDaysAgo;
+
       if (tierParam === "all") {
         if (themeParam !== "all")
-          return (
-            isQuickSearch &&
-            isPriceInRange &&
-            isDaysAgo &&
-            themeParam === newTheme
-          );
-        return (
-          isQuickSearch && isPriceInRange && isDaysAgo && newTier !== "all"
-        );
+          return isCommonConditional && themeParam === newTheme;
+        return isCommonConditional && newTier !== "all";
       }
 
       if (themeParam === "all") {
         if (tierParam !== "all")
-          return (
-            isQuickSearch &&
-            isPriceInRange &&
-            isDaysAgo &&
-            tierParam === newTier
-          );
-        return (
-          isQuickSearch && isPriceInRange && isDaysAgo && newTheme !== "all"
-        );
+          return isCommonConditional && tierParam === newTier;
+        return isCommonConditional && newTheme !== "all";
       }
 
       if (tierParam === "all" && themeParam === "all") {
-        return (
-          isQuickSearch &&
-          isPriceInRange &&
-          isDaysAgo &&
-          newTier !== "all" &&
-          newTheme !== "all"
-        );
+        return isCommonConditional && newTier !== "all" && newTheme !== "all";
       }
 
       return (
-        isQuickSearch &&
-        isPriceInRange &&
-        isDaysAgo &&
-        tierParam === newTier &&
-        themeParam === newTheme
+        isCommonConditional && tierParam === newTier && themeParam === newTheme
       );
     })
     .sort((a, b) => {
@@ -106,20 +85,22 @@ const FigureBoard = () => {
       return 0;
     });
 
-  console.log("figureSearchList", figureSearchList.length);
-
   useEffect(() => {
+    // refresh data every 1 minute
     setPagingFigureList(figureSearchList.slice(0, 12));
+    const interval = setInterval(() => {
+      console.log("1");
+      setPagingFigureList(figureSearchList.slice(0, 12));
+    }, 60000);
+    return () => clearInterval(interval);
   }, [
     tierParam,
     themeParam,
     timeParam,
     priceParam,
-    query.get("priceRangeFrom"),
-    query.get("priceRangeTo"),
+    priceRangeParam.from,
+    priceRangeParam.to,
   ]);
-
-  console.log(pagingFigureList);
 
   const handleViewMore = () => {
     const currentLength = pagingFigureList.length;
@@ -132,7 +113,7 @@ const FigureBoard = () => {
     <section className="">
       <TierFilter />
       <div className="figure-list">
-        <div className="flex flex-wrap gap-10">
+        <div className="flex flex-wrap gap-10 max-h-[1230px] overflow-y-auto scrollbar">
           {pagingFigureList.map((figure) => {
             return <FigureCard key={figure.id} figure={figure} />;
           })}
